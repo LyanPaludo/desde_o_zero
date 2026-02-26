@@ -1,0 +1,103 @@
+:root {
+  /* Tipografia */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Cor padrão do texto */
+  color: rgba(255, 255, 255, 0.87);
+
+  /* Variáveis reutilizáveis */
+  --header-height: 64px;
+  --color-text: rgba(255, 255, 255, 0.87);
+  --color-text-muted: rgba(255, 255, 255, 0.45);
+  --color-accent: #646cff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* LAYOUT WRAPPER */
+.layout-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================
+==========SECTIONS==========
+============================ */
+
+section {
+  min-height: 100vh;
+  padding-top: var(--header-height); /* evita conteúdo ficar atrás do header */
+}
+
+/* ================================
+   TIPOGRAFIA BASE
+================================ */
+h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.1; }
+h2 { font-size: clamp(1.5rem, 3vw, 2.5rem); line-height: 1.2; }
+h3 { font-size: clamp(1.2rem, 2vw, 1.8rem); }
+
+/* ================================
+   HEADER FIXO COM EFEITO VIDRO
+================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  /* Efeito vidro */
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header a.home-link {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.site-header a.home-link:hover {
+  color: var(--color-accent);
+}
+
+/* ================================
+   FOOTER DE CRÉDITOS
+================================ */
+.site-footer {
+  width: 100%;
+  padding: 2rem;
+  text-align: center;
+
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
