@@ -5,20 +5,20 @@ export default function Home() {
     return (
         <PageTransition>
 
-            <section data-section="hero">
-                <h1 className={styles.tituloUm}>Hero</h1>
+            <section data-section="projeto">
+                <h1 className={styles.titulos}>SOBRE O PROJETO</h1>
             </section>
 
-            <section data-section="about">
-                <h1 className={styles.tituloDois}>About</h1>
+            <section data-section="sobre">
+                <h1 className={styles.titulos}>SOBRE O AUTOR</h1>
             </section>
 
-            <section data-section="work">
-                <h1 className={styles.tituloTres}>Work</h1>
+            <section data-section="temas">
+                <h1 className={styles.titulos}>TEMAS ATUAIS</h1>
             </section>
 
-            <section data-section="contact">
-                <h1 className={styles.tituloQuatro}>Contact</h1>
+            <section data-section="sugestoes">
+                <h1 className={styles.titulos}>SUGESTÕES</h1>
             </section>
 
         </PageTransition>

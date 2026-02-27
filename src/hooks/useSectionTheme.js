@@ -2,14 +2,14 @@ import { useState, useEffect } from 'react'
 
 // agora vem o mapa das seções, cada seção vai ter um tema específico:
 const SECTION_THEMES = {
-  hero:    '#0a0a0f',
-  about:   '#0f1a2e',
-  work:    '#1a0f2e',
-  contact: '#0f2e1a',
+  projeto:    '#0a0a0f',
+  sobre:   '#0f1a2e',
+  temas:    '#1a0f2e',
+  sugestoes: '#0f2e1a',
 }
 
 export function useSectionTheme() {
-    const [activeSection, setActiveSection] = useState('hero')
+    const [activeSection, setActiveSection] = useState('projeto')
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -20,7 +20,7 @@ export function useSectionTheme() {
                     }
                 })
             },
-            { threshold: 0.5 } //Isso indica que a seção deve estar 50% visível
+            { threshold: [0, 0.25, 0.5] } //Isso indica que a seção deve estar 50% visível
         )
 
         document.querySelectorAll('[data-section]').forEach(el => observer.observe(el))

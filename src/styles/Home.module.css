@@ -1,0 +1,19 @@
+/*=====TITULOS=====
+===================*/
+.titulos {
+  display: flex;
+  width:fit-content;
+  padding: 15px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 20px;
+
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  position: sticky;
+  top: calc(var(--header-height) + 1rem); /* fica abaixo do header fixo */
+}
+
+/* RESTO DO CÓDIGO:
+AAA */

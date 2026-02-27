@@ -43,6 +43,7 @@ body {
 section {
   min-height: 100vh;
   padding-top: var(--header-height); /* evita conteúdo ficar atrás do header */
+  padding: 0 clamp(1.5rem, 5vw, 6rem)
 }
 
 /* ================================

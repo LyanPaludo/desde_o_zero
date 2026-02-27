@@ -1,8 +1,11 @@
 import { Outlet, Link } from 'react-router-dom'
 import { useSectionTheme } from '../hooks/useSectionTheme'
+import { AnimatePresence } from 'framer-motion'
+import { useLocation } from 'react-router-dom'
 
 export default function RootLayout() {
     const { bgColor } = useSectionTheme()
+    const location = useLocation()
 
     return (
         <div
@@ -15,7 +18,9 @@ export default function RootLayout() {
             </header>
 
             <main>
-                <Outlet /> {/*Páginas filhas vão renderizar aqui... */}
+                <AnimatePresence>
+                    <Outlet key={location.pathname}/> {/*Páginas filhas vão renderizar aqui... */}
+                </AnimatePresence>
             </main>
 
             <footer className="site-footer">
